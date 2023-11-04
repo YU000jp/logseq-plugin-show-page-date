@@ -1,3 +1,13 @@
 {
-
+    "⚠️After running 're-index'": "⚠️'re-index'の影響を受けます",
+    "⚠️Performing a `re-index` in Logseq updates the dates of `created-at` for all pages, causing them to be inadvertently changed.": "⚠️Logseqで're-index'を実行すると、すべてのページの`created-at`の日付が更新され、誤って変更されている可能性があります。",
+    "Created-at": "作成日時",
+    "Enable": "有効にする",
+    "Last modified": "最終更新日時",
+    "Page Date Notifier feature": "ページに関する日付を通知する機能",
+    "Page info": "ページ情報",
+    "Page Info Button feature": "ページ情報ボタンの機能",
+    "Show the date when a page opens": "ページを開いたときにそれに関する日付を表示する",
+    "Show the page info when click 📋 icon on the right of page title.": "ページ名の右にある📋アイコンをクリックしたときにページ情報を表示します。",
+    "Updated-at": "更新日時"
 }
