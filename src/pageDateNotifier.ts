@@ -1,8 +1,9 @@
-import { PageEntity } from "@logseq/libs/dist/LSPlugin"
 import { isSameDay } from "date-fns"
 import { t } from "logseq-l10n"
 
 export const loadPageDateNotifier = () => {
+
+  document.body.classList.add('show-page-date-notifier')
 
   //ページを開いたときに、ページの作成日時、更新日時を表示する
   logseq.App.registerUIItem("pagebar", {
@@ -20,13 +21,16 @@ export const loadPageDateNotifier = () => {
   })
 }
 
-const insertPageBar = async () => {
+export const insertPageBar = async () => {
+
+  if (logseq.settings!.loadPageDateNotifier === false || document.body.classList.contains('show-page-date-notifier') === false) return
+
   const elementPageBarSpace = parent.document.getElementById(
     "pageBar--pageInfoBarSpace"
   ) as HTMLDivElement | null
   if (!elementPageBarSpace) return
   if (elementPageBarSpace.dataset.pageInfoCheck) return
-  const current = (await logseq.Editor.getCurrentPage()) as PageEntity | null
+  const current = (await logseq.Editor.getCurrentPage()) as { createdAt: number, updatedAt: number } | null
   if (!current) return
   if (!current.updatedAt && !current.createdAt) return
   const updated: Date = new Date(current.updatedAt as number)

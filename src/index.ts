@@ -3,7 +3,8 @@ import { settingsTemplate } from './settings'
 import { setup as l10nSetup, t } from "logseq-l10n" //https://github.com/sethyuan/logseq-l10n
 import ja from "./translations/ja.json"
 import { loadPageInfoButton } from "./pageInfoButton"
-import { loadPageDateNotifier } from "./pageDateNotifier"
+import { insertPageBar, loadPageDateNotifier } from "./pageDateNotifier"
+import { LSPluginBaseInfo } from '@logseq/libs/dist/LSPlugin.user'
 
 /* main */
 const main = async () => {
@@ -73,15 +74,52 @@ const main = async () => {
   }
 `)
 
-  //Page bar item
-  //ページ情報を表示する
+  //初回起動時
+  loadPageDateNotifier()
   if (logseq.settings!.loadPageInfoButton === true) loadPageInfoButton()
 
-  //Page date notifier
-  if (logseq.settings!.loadPageDateNotifier === true) loadPageDateNotifier()
+  //設定変更時
+  logseq.onSettingsChanged(async (newSet: LSPluginBaseInfo['settings'], oldSet: LSPluginBaseInfo['settings']) => {
+    if (oldSet.loadPageDateNotifier === false
+      && newSet.loadPageDateNotifier === true) {
+      //オン
+      loadPageDateNotifier()
+      logseq.UI.showMsg(t("This setting will not be reflected on this page."), "warning")
+    } else
+      if (oldSet.loadPageDateNotifier === true
+        && newSet.loadPageDateNotifier === false) {
+        //オフ
+        removeClass('show-page-date-notifier')
+        removeInnerElementId('pageBar--pageInfoBarSpace')
+      }
+
+    if (oldSet.loadPageInfoButton === false
+      && newSet.loadPageInfoButton === true) {
+      //オン
+      if (!document.body.classList.contains("show-page-info-button")) loadPageInfoButton()
+    } else
+      if (oldSet.loadPageInfoButton === true
+        && newSet.loadPageInfoButton === false) {
+        //オフ
+        removeClass('show-page-info-button')
+        logseq.App.registerUIItem("pagebar", {
+          key: "pageInfo",
+          template: "",
+        })
+      }
+  })
 
 }/* end_main */
 
+
+const removeClass = (className: string) => {
+  if (document.body.classList.contains(className)) document.body.classList.remove(className)
+}
+
+const removeInnerElementId = (elementId: string) => {
+  const doc = parent.document.getElementById(elementId) as HTMLElement | null //parent.documentはiframeの親要素
+  if (doc) doc.innerHTML = ""
+}
 
 
 logseq.ready(main).catch(console.error)

@@ -9,5 +9,6 @@
     "Page Info Button feature": "ページ情報ボタンの機能",
     "Show the date when a page opens": "ページを開いたときにそれに関する日付を表示する",
     "Show the page info when click 📋 icon on the right of page title.": "ページ名の右にある📋アイコンをクリックしたときにページ情報を表示します。",
+    "This setting will not be reflected on this page." : "この設定はこのページには反映されません。",
     "Updated-at": "更新日時"
 }

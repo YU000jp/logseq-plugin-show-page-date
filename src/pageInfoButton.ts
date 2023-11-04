@@ -3,7 +3,10 @@ import { dateFormatter, timeFormatter } from "./pageDateNotifier"
 import { t } from "logseq-l10n"
 
 //Page info button
-export function loadPageInfoButton() {
+export const loadPageInfoButton = () => {
+
+  document.body.classList.add('show-page-date-button-info')
+
   logseq.App.registerUIItem("pagebar", {
     key: "pageInfo",
     template: `
@@ -12,8 +15,8 @@ export function loadPageInfoButton() {
   })
   logseq.provideModel({
     modelPageInfo: async () => {
-      const currentPage =
-        (await logseq.Editor.getCurrentPage()) as PageEntity | null
+
+      const currentPage = await logseq.Editor.getCurrentPage() as PageEntity | null
       if (currentPage) {
         const updatedAt = new Date(currentPage.updatedAt as number)
         const updatedAtStr =
@@ -38,7 +41,9 @@ export function loadPageInfoButton() {
           "info",
           { timeout: 1000 * 60 }
         )
-      } else logseq.UI.showMsg("Not found", "error", { timeout: 1200 })
+
+      } else
+        logseq.UI.showMsg("Not found", "error", { timeout: 1200 })
     },
   })
 }
