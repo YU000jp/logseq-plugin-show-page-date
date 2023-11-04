@@ -11,9 +11,10 @@ Display creation and modification dates on pages.
 [![Downloads](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-show-page-date/total.svg)](https://github.com/YU000jp/logseq-plugin-show-page-date/releases)
 <!-- Published 2023 -->
 
----
+- Displays each page to the right of the page name.
+   > Dates are localized.
 
-## Options
+![image](https://github.com/YU000jp/logseq-plugin-show-page-date/assets/111847207/3c33416c-ad43-4666-9011-b768bad0b2bb)
 
 ---
 
@@ -25,11 +26,14 @@ Display creation and modification dates on pages.
 
 ### Usage
 
----
+- By default, the display is turned on.
+   > In the plugin settings, choose whether to display the date as is or to display it after pressing a button.
 
 ## Showcase / Questions / Ideas / Help
 
 > Go to the [discussion](https://github.com/YU000jp/logseq-plugin-show-page-date/discussions) tab to ask and find this kind of things.
+
+- ⚠️Creation date is affected by re-index.
 
 ## Prior art & Credit
 
