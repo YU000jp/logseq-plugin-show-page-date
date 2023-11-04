@@ -1,12 +1,12 @@
 {
-    "name": "logseq-plugin-template-typescript",
-    "description": "A template for Logseq plugin written in TypeScript",
-    "repository": "https://github.com/YU000jp/logseq-plugin-template-typescript.git",
+    "name": "logseq-plugin-show-page-date",
+    "description": "Display creation and modification dates on pages.",
+    "repository": "https://github.com/YU000jp/logseq-plugin-show-page-date.git",
     "author": "YU000jp",
     "license": "MIT",
     "logseq": {
-        "id": "template-typescript",
-        "title": "Template TypeScript",
+        "id": "show-page-date",
+        "title": "Show page date",
         "icon": "./icon.svg",
         "main": "./dist/index.html"
     },
