@@ -13,17 +13,26 @@ export const loadPageDateNotifier = () => {
         `,
   })
 
-  logseq.App.onPageHeadActionsSlotted(async () => {
-    setTimeout(() => insertPageBar(), 300)
-  })
-  logseq.App.onRouteChanged(async () => {
-    setTimeout(() => insertPageBar(), 300)
-  })
+  if (logseq.settings!.loadPageDateNotifier === true)
+    document.body.classList.add('show-page-date-notifier')
+
+  let processing = false
+  const event = () => setTimeout(() => {
+    if (processing) return
+    processing = true
+    insertPageBar()
+    setTimeout(() => processing = false, 100)
+  }, 50)
+
+  logseq.App.onPageHeadActionsSlotted(async () => event())
+  logseq.App.onRouteChanged(async () => event())
 }
 
-export const insertPageBar = async () => {
 
-  if (logseq.settings!.loadPageDateNotifier === false || document.body.classList.contains('show-page-date-notifier') === false) return
+const insertPageBar = async () => {
+  if (logseq.settings!.loadPageDateNotifier === false
+    || document.body.classList.contains('show-page-date-notifier') === false)
+    return
 
   const elementPageBarSpace = parent.document.getElementById(
     "pageBar--pageInfoBarSpace"
@@ -32,7 +41,10 @@ export const insertPageBar = async () => {
   if (elementPageBarSpace.dataset.pageInfoCheck) return
   const current = (await logseq.Editor.getCurrentPage()) as { createdAt: number, updatedAt: number } | null
   if (!current) return
-  if (!current.updatedAt && !current.createdAt) return
+  if (!current.updatedAt
+    && !current.createdAt) return
+
+
   const updated: Date = new Date(current.updatedAt as number)
   //updatedをフォーマットする(最後の3文字を削除する)
   const updatedString = dateFormatter.format(updated) + " " + timeFormatter.format(updated)

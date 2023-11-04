@@ -3,7 +3,7 @@ import { settingsTemplate } from './settings'
 import { setup as l10nSetup, t } from "logseq-l10n" //https://github.com/sethyuan/logseq-l10n
 import ja from "./translations/ja.json"
 import { loadPageInfoButton } from "./pageInfoButton"
-import { insertPageBar, loadPageDateNotifier } from "./pageDateNotifier"
+import { loadPageDateNotifier } from "./pageDateNotifier"
 import { LSPluginBaseInfo } from '@logseq/libs/dist/LSPlugin.user'
 
 /* main */
