@@ -14,7 +14,7 @@ Display creation and modification dates on pages.
 - Displays each page to the right of the page name.
    > Dates are localized.
 
-![image](https://github.com/YU000jp/logseq-plugin-show-page-date/assets/111847207/3c33416c-ad43-4666-9011-b768bad0b2bb)
+![280448400-3c33416c-ad43-4666-9011-b768bad0b2bb](https://github.com/YU000jp/logseq-plugin-show-page-date/assets/111847207/f254d6c4-bc42-40a3-9594-d4ab00a1c3a1)
 
 ---
 
