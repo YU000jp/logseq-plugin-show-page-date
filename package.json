@@ -5,7 +5,7 @@
     "author": "YU000jp",
     "license": "MIT",
     "logseq": {
-        "id": "show-page-date",
+        "id": "logseq-plugin-show-page-date",
         "title": "Show page date",
         "icon": "./icon.svg",
         "main": "./dist/index.html"

@@ -18,7 +18,7 @@ const main = async () => {
 
   logseq.provideStyle(String.raw`
   body>div#root>div>main {
-    & article>div[data-id="show-page-date"] {
+    & article>div[data-id="logseq-plugin-show-page-date"] {
         & div.heading-item {
           margin-top: 3em;
           border-top-width: 1px;
