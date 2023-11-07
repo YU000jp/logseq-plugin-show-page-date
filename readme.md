@@ -2,8 +2,6 @@
 
 Display creation and modification dates on pages.
 
-- not published yet 👷🚧
-
 > [Release](https://github.com/YU000jp/logseq-plugin-show-page-date/releases) information is on the right. Load files at developer mode.
 
 [![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-show-page-date)](https://github.com/YU000jp/logseq-plugin-show-page-date/releases)
@@ -20,7 +18,7 @@ Display creation and modification dates on pages.
 
 ## Getting Started
 
-### Install from Logseq Marketplace (Coming👷🚧)
+### Install from Logseq Marketplace
 
 - Press [`---`] on the top right toolbar to open [`Plugins`]. Select marketplace. Type `Show page date` in the search field, select it from the search results and install
 
