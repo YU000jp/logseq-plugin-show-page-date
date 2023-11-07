@@ -2,12 +2,10 @@
 
 Display creation and modification dates on pages.
 
-> [Release](https://github.com/YU000jp/logseq-plugin-show-page-date/releases) information is on the right. Load files at developer mode.
-
 [![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-show-page-date)](https://github.com/YU000jp/logseq-plugin-show-page-date/releases)
 [![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-show-page-date?color=blue)](https://github.com/YU000jp/logseq-plugin-show-page-date/LICENSE)
 [![Downloads](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-show-page-date/total.svg)](https://github.com/YU000jp/logseq-plugin-show-page-date/releases)
-<!-- Published 2023 -->
+ Published 2023/11/07
 
 - Displays dates of each page to the right of the page name.
    > Dates are localized.
