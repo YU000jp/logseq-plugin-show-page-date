@@ -1,6 +1,6 @@
 # Logseq プラグイン: Show page date ページの日付表示
 
-[English](https://github.com/YU000jp/logseq-plugin-show-page-date) | [日本語](https://github.com/YU000jp/logseq-plugin-show-page-date/blob/main/readme.md)
+[English](https://github.com/YU000jp/logseq-plugin-show-page-date) | [日本語](https://github.com/YU000jp/logseq-plugin-show-page-date/blob/main/readme.ja.md)
 
 ページの作成日と変更日を表示します。
 
