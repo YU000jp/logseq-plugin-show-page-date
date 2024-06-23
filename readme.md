@@ -29,7 +29,7 @@ Display creation and modification dates on pages.
 
 ## Showcase / Questions / Ideas / Help
 
-> Go to the [discussion](https://github.com/YU000jp/logseq-plugin-show-page-date/discussions) tab to ask and find this kind of things.
+> Go to the [Discussions](https://github.com/YU000jp/logseq-plugin-show-page-date/discussions) tab to ask and find this kind of things.
 
 - ⚠️Creation date is affected by re-index.
 
