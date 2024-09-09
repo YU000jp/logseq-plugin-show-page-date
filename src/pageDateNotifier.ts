@@ -1,3 +1,4 @@
+import { PageEntity } from "@logseq/libs/dist/LSPlugin.user"
 import { isSameDay } from "date-fns"
 import { t } from "logseq-l10n"
 
@@ -39,7 +40,7 @@ const insertPageBar = async () => {
   ) as HTMLDivElement | null
   if (!elementPageBarSpace) return
   if (elementPageBarSpace.dataset.pageInfoCheck) return
-  const current = (await logseq.Editor.getCurrentPage()) as { createdAt: number, updatedAt: number } | null
+  const current = (await logseq.Editor.getCurrentPage() as PageEntity | null) as { createdAt: number, updatedAt: number } | null
   if (!current) return
   if (!current.updatedAt
     && !current.createdAt) return
@@ -58,7 +59,7 @@ const insertPageBar = async () => {
       "</td></tr>"
       : ""
     }${logseq.settings!.pageDateNotifierCreatedAt === true // 設定で作成日時を表示するかどうかを判定
-      && !isSameDay(updated, created) // updatedとcreatedが同じ日付の場合は、createdを表示しない
+      //&& !isSameDay(updated, created) // updatedとcreatedが同じ日付の場合は、createdを表示しない
       && createdString // createdがある場合のみ表示
       ? `<tr><th>${t("Created-at")}</th><td>` +
       createdString +

@@ -4,6 +4,9 @@
 
 ページの作成日と変更日を表示します。
 
+> [!NOTE]
+このプラグインはLogseq db版では動作します。
+
 [![最新リリースバージョン](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-show-page-date)](https://github.com/YU000jp/logseq-plugin-show-page-date/releases)
 [![ライセンス](https://img.shields.io/github/license/YU000jp/logseq-plugin-show-page-date?color=blue)](https://github.com/YU000jp/logseq-plugin-show-page-date/LICENSE)
 [![ダウンロード数](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-show-page-date/total.svg)](https://github.com/YU000jp/logseq-plugin-show-page-date/releases)

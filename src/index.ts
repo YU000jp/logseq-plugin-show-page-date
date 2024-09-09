@@ -17,8 +17,7 @@ const main = async () => {
 
 
   logseq.provideStyle(String.raw`
-  body>div#root>div>main {
-    & article>div[data-id="logseq-plugin-show-page-date"] {
+    [data-id="logseq-plugin-show-page-date"] {
         & div.heading-item {
           margin-top: 3em;
           border-top-width: 1px;
@@ -32,18 +31,16 @@ const main = async () => {
           height: 12em;
           font-size: unset;
         }
-        & div.desc-item {
-          & p {
-              margin-top: 0.5em;
-              margin-bottom: 0.5em;
-          }
+        & div.desc-item p {
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
         }
     }
-    & div#main-content-container div {
-        &#injected-ui-item-pageInfoBarSpace-show-page-date.injected-ui-item-pagebar {
+    #main-content-container {
+        & #injected-ui-item-pageInfoBarSpace-show-page-date.injected-ui-item-pagebar {
           order:-1;
         }
-        &#pageBar--pageInfoBarSpace {
+        & #pageBar--pageInfoBarSpace {
           height: 80px;
           user-select: none;
           overflow: auto;
@@ -61,17 +58,16 @@ const main = async () => {
             }
           }
         }
-        &.list-wrap:has(div#pageBar--pageInfoBarSpace) {
+        & div.list-wrap:has(div#pageBar--pageInfoBarSpace) {
           padding-top:unset;
           overflow:hidden;
           height:100px;
         }
-        &[data-type="pagebar"] div.list-wrap:has(div#pageBar--pageInfoBarSpace) {
+        & [data-type="pagebar"] div.list-wrap:has(div#pageBar--pageInfoBarSpace) {
         overflow:hidden;
         }
       }
     }
-  }
 `)
 
   //初回起動時
