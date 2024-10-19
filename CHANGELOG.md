@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/YU000jp/logseq-plugin-show-page-date/compare/v1.0.1...v1.0.2) (2024-10-19)
+
+
+### Bug Fixes
+
+* Compatibility for db version ([5c6b37b](https://github.com/YU000jp/logseq-plugin-show-page-date/commit/5c6b37b3415e0dce1a30d94a79ad26d7abc3cc8e))
+
 ## [1.0.1](https://github.com/YU000jp/logseq-plugin-show-page-date/compare/v1.0.0...v1.0.1) (2023-11-06)
 
 
