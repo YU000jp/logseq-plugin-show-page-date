@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/YU000jp/logseq-plugin-show-page-date/compare/v1.0.2...v1.0.3) (2025-04-29)
+
+
+### Performance Improvements
+
+* **ref:** Improved processing performance through the use of queries && Created-At should not be used. ([d504bfd](https://github.com/YU000jp/logseq-plugin-show-page-date/commit/d504bfd37252a651f58be6767c23bdd91d8e90f1))
+
 ## [1.0.2](https://github.com/YU000jp/logseq-plugin-show-page-date/compare/v1.0.1...v1.0.2) (2024-10-19)
 
 
