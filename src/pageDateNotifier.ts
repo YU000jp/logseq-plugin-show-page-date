@@ -1,6 +1,6 @@
 import { PageEntity } from "@logseq/libs/dist/LSPlugin.user"
-import { isSameDay } from "date-fns"
 import { t } from "logseq-l10n"
+import { getCurrentPageUpdateAt } from "./query/advancedQuery"
 
 export const loadPageDateNotifier = () => {
 
@@ -40,29 +40,15 @@ const insertPageBar = async () => {
   ) as HTMLDivElement | null
   if (!elementPageBarSpace) return
   if (elementPageBarSpace.dataset.pageInfoCheck) return
-  const current = (await logseq.Editor.getCurrentPage() as PageEntity | null) as { createdAt: number, updatedAt: number } | null
-  if (!current) return
-  if (!current.updatedAt
-    && !current.createdAt) return
+  const updateAt = await getCurrentPageUpdateAt() as PageEntity["updatedAt"] | null
+  if (!updateAt) return
 
-
-  const updated: Date = new Date(current.updatedAt as number)
-  //updatedをフォーマットする(最後の3文字を削除する)
+  const updated: Date = new Date(updateAt as number)
   const updatedString = dateFormatter.format(updated) + " " + timeFormatter.format(updated)
-  const created: Date = new Date(current.createdAt as number)
-  //createdをフォーマットする
-  const createdString = dateFormatter.format(created) + " " + timeFormatter.format(created)
   elementPageBarSpace.innerHTML = `
   <table>${updatedString
       ? `<tr><th>${t("Last modified")}</th><td>` +
       updatedString +
-      "</td></tr>"
-      : ""
-    }${logseq.settings!.pageDateNotifierCreatedAt === true // 設定で作成日時を表示するかどうかを判定
-      //&& !isSameDay(updated, created) // updatedとcreatedが同じ日付の場合は、createdを表示しない
-      && createdString // createdがある場合のみ表示
-      ? `<tr><th>${t("Created-at")}</th><td>` +
-      createdString +
       "</td></tr>"
       : ""
     }</table>

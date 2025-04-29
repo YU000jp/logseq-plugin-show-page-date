@@ -39,12 +39,4 @@ export const settingsTemplate = (): SettingSchemaDesc[] => [
     default: true,
     description: "",
   },
-  {
-    //created-atを表示しない
-    key: "pageDateNotifierCreatedAt",
-    title: `${t("Enable")}: ${t("Created-at")}`,
-    type: "boolean",
-    default: true,
-    description: t("⚠️Performing a `re-index` in Logseq updates the dates of `created-at` for all pages, causing them to be inadvertently changed."),
-  },
 ]
