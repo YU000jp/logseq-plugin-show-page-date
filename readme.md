@@ -1,40 +1,33 @@
 # Logseq Plugin: Show page date
 
-[English](https://github.com/YU000jp/logseq-plugin-show-page-date) | [日本語](https://github.com/YU000jp/logseq-plugin-show-page-date/blob/main/readme.ja.md)
-
-Display creation and modification dates on pages.
-
 > [!NOTE]
 This plugin works in Logseq db version.
 
-[![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-show-page-date)](https://github.com/YU000jp/logseq-plugin-show-page-date/releases)
-[![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-show-page-date?color=blue)](https://github.com/YU000jp/logseq-plugin-show-page-date/LICENSE)
-[![Downloads](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-show-page-date/total.svg)](https://github.com/YU000jp/logseq-plugin-show-page-date/releases)
- Published 2023/11/07
+[English](https://github.com/YU000jp/logseq-plugin-show-page-date) | [日本語](https://github.com/YU000jp/logseq-plugin-show-page-date/blob/main/readme.ja.md) [![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-show-page-date)](https://github.com/YU000jp/logseq-plugin-show-page-date/releases) [![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-show-page-date?color=blue)](https://github.com/YU000jp/logseq-plugin-show-page-date/LICENSE) [![Downloads](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-show-page-date/total.svg)](https://github.com/YU000jp/logseq-plugin-show-page-date/releases) Published 20231107
 
-- Displays dates of each page to the right of the page name.
-   > Dates are localized.
+## Features
 
-![280448400-3c33416c-ad43-4666-9011-b768bad0b2bb](https://github.com/YU000jp/logseq-plugin-show-page-date/assets/111847207/58e28654-3f45-4fd0-bcdf-3a76a87a41ad)
+- 📅 Displays modification date and time for each page
+- 🌐 Dates are automatically localized to your system language
 
----
 
 ## Getting Started
 
-### Install from Logseq Marketplace
+1. Install from Logseq Marketplace
+   - Click [`---`] button on the top right toolbar
+   - Select [`Plugins`]
+   - Search for `Show page date`
+   - Click Install
 
-- Press [`---`] on the top right toolbar to open [`Plugins`]. Select marketplace. Type `Show page date` in the search field, select it from the search results and install
-
-### Usage
-
-- By default, the display is turned on.
-   > In the plugin settings, choose whether to display the date as is or to display it after pressing a button.
+2. Configuration
+   - Go to plugin settings
+   - Choose your preferred display mode:
+     - Always show dates
+     - Show dates only when button is clicked
 
 ## Showcase / Questions / Ideas / Help
 
 > Go to the [Discussions](https://github.com/YU000jp/logseq-plugin-show-page-date/discussions) tab to ask and find this kind of things.
-
-- ⚠️Creation date is affected by re-index.
 
 ## Prior art & Credit
 
