@@ -8,7 +8,7 @@ This plugin works in Logseq db version.
 ## Features
 
 - 📅 Displays modification date and time for each page
-- 🌐 Dates are automatically localized to your system language
+  > 🌐 Dates are automatically localized to your system language
 
 
 ## Getting Started
