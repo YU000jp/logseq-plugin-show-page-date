@@ -4,7 +4,7 @@ import { setup as l10nSetup, t } from "logseq-l10n" //https://github.com/sethyua
 import ja from "./translations/ja.json"
 import { loadPageInfoButton } from "./pageInfoButton"
 import { loadPageDateNotifier } from "./pageDateNotifier"
-import { LSPluginBaseInfo } from '@logseq/libs/dist/LSPlugin.user'
+import { LSPluginBaseInfo } from '@logseq/libs/dist/LSPlugin'
 
 /* main */
 const main = async () => {
