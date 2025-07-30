@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/YU000jp/logseq-plugin-show-page-date/compare/v1.1.0...v1.2.0) (2025-07-30)
+
+
+### Features
+
+* **Add:** language sample [#10](https://github.com/YU000jp/logseq-plugin-show-page-date/issues/10) ([d03e622](https://github.com/YU000jp/logseq-plugin-show-page-date/commit/d03e622f21113d7273757627892465d8e5758d1b))
+
 # [1.1.0](https://github.com/YU000jp/logseq-plugin-show-page-date/compare/v1.0.3...v1.1.0) (2025-07-30)
 
 
