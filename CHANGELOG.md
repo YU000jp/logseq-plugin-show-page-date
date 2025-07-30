@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/YU000jp/logseq-plugin-show-page-date/compare/v1.0.3...v1.1.0) (2025-07-30)
+
+
+### Features
+
+* **Add:** An option to support language-specific date displays [#10](https://github.com/YU000jp/logseq-plugin-show-page-date/issues/10) ([e2ee202](https://github.com/YU000jp/logseq-plugin-show-page-date/commit/e2ee20207c50a56777a3dd9669d39a953f053d45))
+
 ## [1.0.3](https://github.com/YU000jp/logseq-plugin-show-page-date/compare/v1.0.2...v1.0.3) (2025-04-29)
 
 
