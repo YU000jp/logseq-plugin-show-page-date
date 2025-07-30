@@ -1,9 +1,20 @@
 import { SettingSchemaDesc } from '@logseq/libs/dist/LSPlugin.user'
 import { t } from 'logseq-l10n'
+import { language } from './language'
 
 /* user setting */
 // https://logseq.github.io/plugins/types/SettingSchemaDesc.html
 export const settingsTemplate = (): SettingSchemaDesc[] => [
+  {
+    key: "userLanguage",
+    title: t("Select language (default)"),
+    type: "enum",
+    default: "default",
+    enumChoices: language,
+    // defaultを選択すると、ブラウザの言語設定に従う(ローカライズ)
+    description: t("If default is selected, the browser's language settings are followed (localisation)."),
+  },
+
   {
     //loadPageInfo
     key: "headingLoadPageInfoButton",

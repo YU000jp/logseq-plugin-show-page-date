@@ -44,7 +44,9 @@ const insertPageBar = async () => {
   if (!updateAt) return
 
   const updated: Date = new Date(updateAt as number)
-  const updatedString = dateFormatter.format(updated) + " " + timeFormatter.format(updated)
+  const updatedString = logseq.settings!.userLanguage === "default" ?
+    dateFormatter.format(updated) + " " + timeFormatter.format(updated)
+    : dateFormatterUser(logseq.settings!.userLanguage).format(updated) + " " + timeFormatterUser(logseq.settings!.userLanguage).format(updated)
   elementPageBarSpace.innerHTML = `
   <table>${updatedString
       ? `<tr><th>${t("Last modified")}</th><td>` +
@@ -63,7 +65,18 @@ export const dateFormatter = new Intl.DateTimeFormat("default", {
   day: "numeric",
 })
 
+export const dateFormatterUser = (locales: string) => new Intl.DateTimeFormat(locales, {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+})
+
 export const timeFormatter = new Intl.DateTimeFormat("default", {
+  hour: "numeric",
+  minute: "numeric",
+})
+
+export const timeFormatterUser = (locales: string) => new Intl.DateTimeFormat(locales, {
   hour: "numeric",
   minute: "numeric",
 })

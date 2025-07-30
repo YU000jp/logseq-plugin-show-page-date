@@ -1,5 +1,5 @@
 import { PageEntity } from "@logseq/libs/dist/LSPlugin"
-import { dateFormatter, timeFormatter } from "./pageDateNotifier"
+import { dateFormatter, dateFormatterUser, timeFormatter, timeFormatterUser } from "./pageDateNotifier"
 import { t } from "logseq-l10n"
 import { getCurrentPageUpdateAt } from "./query/advancedQuery"
 
@@ -19,12 +19,11 @@ export const loadPageInfoButton = () => {
 
       const updateAt = await getCurrentPageUpdateAt() as PageEntity["updatedAt"] | null
       if (updateAt) {
-        const updatedAt = new Date(updateAt as number)
-        const updatedAtStr =
-          dateFormatter.format(updatedAt) +
-          " " +
-          timeFormatter.format(updatedAt)
-        
+        const updated = new Date(updateAt as number)
+        const updatedAtStr = logseq.settings!.userLanguage === "default" ?
+          dateFormatter.format(updated) + " " + timeFormatter.format(updated)
+          : dateFormatterUser(logseq.settings!.userLanguage).format(updated) + " " + timeFormatterUser(logseq.settings!.userLanguage).format(updated)
+
         logseq.UI.showMsg(
           `--- ${t("Page info")} ---
 
