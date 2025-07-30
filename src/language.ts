@@ -1,64 +1,94 @@
 export const language: string[] = [
              "default", // Gregorian calendar (default)
-             "en", // Gregorian calendar (English)
-             "am-ET-u-ca-ethiopic", // Amharic (Ethiopia) - Ethiopian calendar
-             "ar-EG", // Egypt
-             "ar-SA", // Arabic (Saudi Arabia) - Gregorian calendar (default)
-             "ar-SA-u-ca-islamic-umalqura", // Arabic (Saudi Arabia) - Islamic (Umm al-Qura) calendar
-             "bn-BD", // Bangladesh
-             "de-DE", // Germany
-             "en-AU", // Australia
-             "en-CA", // Canada (English)
-             "en-GB", // English (United Kingdom) - Gregorian calendar (default)
-             "en-GB-u-ca-islamic", // English (United Kingdom) - Islamic calendar
-             "en-GB-u-ca-persian", // English (United Kingdom) - Persian calendar
-             "en-US", // English (United States) - Gregorian calendar (default)
-             "en-US-u-ca-islamic", // English (United States) - Islamic calendar
-             "en-US-u-ca-persian", // English (United States) - Persian calendar
-             "es-AR", // Argentina
-             "es-CL", // Chile
-             "es-CO", // Colombia
-             "es-CR", // Costa Rica
-             "es-DO", // Dominican Republic
-             "es-EC", // Ecuador
-             "es-ES", // Spain
-             "es-GT", // Guatemala
-             "es-HN", // Honduras
-             "es-MX", // Mexico
-             "es-NI", // Nicaragua
-             "es-PA", // Panama
-             "es-PE", // Peru
-             "es-PR", // Puerto Rico
-             "es-SV", // El Salvador
-             "es-UY", // Uruguay
-             "es-VE", // Venezuela
-             "fa-IR", // Persian (Iran) - Gregorian calendar (default)
-             "fa-IR-u-ca-persian", // Persian (Iran) - Persian calendar (Jalali)
-             "fr-CA", // Canada (French)
-             "fr-FR", // France
-             "he-IL-u-ca-hebrew", // Hebrew (Israel) - Hebrew calendar
-             "hi-IN", // India
-             "id-ID", // Indonesia
-             "it-IT", // Italy
-             "ja-JP", // Japanese (Japan) - Gregorian calendar (default)
-             "ja-JP-u-ca-japanese", // Japanese (Japan) - Japanese calendar
-             "ko-KR", // Korean (Korea) - Gregorian calendar (default)
-             "ko-KR-u-ca-korean", // Korean (Korea) - Korean calendar
-             "ms-MY", // Malaysia
-             "nl-NL", // Netherlands
-             "pl-PL", // Poland
-             "pt-BR", // Brazil
-             "pt-PT", // Portugal
-             "ru-RU", // Russia
-             "th-TH", // Thailand
-             "th-TH-u-ca-buddhist", // Thai (Thailand) - Buddhist calendar
-             "th-TH-u-nu-thai", // Thai (Thailand) - Thai digits
-             "tr-TR", // Turkey
-             "vi-VN", // Vietnam
-             "zh-CN", // China
-             "zh-CN-u-ca-chinese", // Chinese (China) - Chinese calendar
-             "zh-Hans-CN", // Chinese (China) - Gregorian calendar (default)
-             "zh-Hant-TW-u-ca-taiwan", // Chinese (Taiwan) - Gregorian calendar (default)
-             "zh-TW", // Taiwan
-             "zh-TW-u-ca-roc",
+             "af-ZA", // Afrikaans South Africa
+             "am-ET", // Amharic Ethiopia
+             "ar-SA", // Arabic Saudi Arabia
+             "az-AZ", // Azerbaijani Azerbaijan
+             "be-BY", // Belarusian Belarus
+             "bg-BG", // Bulgarian Bulgaria
+             "bn-IN", // Bengali India
+             "bs-BA", // Bosnian Bosnia and Herzegovina
+             "ca-ES", // Catalan Spain
+             "cs-CZ", // Czech Czech Republic
+             "cy-GB", // Welsh United Kingdom
+             "da-DK", // Danish Denmark
+             "de-AT", // German Austria
+             "de-CH", // German Switzerland
+             "de-DE", // German Germany
+             "el-GR", // Greek Greece
+             "en-AU", // English Australia
+             "en-CA", // English Canada
+             "en-GB", // English United Kingdom
+             "en-IE", // English Ireland
+             "en-IN", // English India
+             "en-NZ", // English New Zealand
+             "en-US", // English United States
+             "en-ZA", // English South Africa
+             "es-AR", // Spanish Argentina
+             "es-CL", // Spanish Chile
+             "es-CO", // Spanish Colombia
+             "es-ES", // Spanish Spain
+             "es-MX", // Spanish Mexico
+             "es-PE", // Spanish Peru
+             "et-EE", // Estonian Estonia
+             "fa-IR", // Persian Iran
+             "fi-FI", // Finnish Finland
+             "fil-PH", // Filipino Philippines
+             "fr-BE", // French Belgium
+             "fr-CA", // French Canada
+             "fr-CH", // French Switzerland
+             "fr-FR", // French France
+             "ga-IE", // Irish Ireland
+             "gl-ES", // Galician Spain
+             "gu-IN", // Gujarati India
+             "he-IL", // Hebrew Israel
+             "hi-IN", // Hindi India
+             "hr-HR", // Croatian Croatia
+             "hu-HU", // Hungarian Hungary
+             "id-ID", // Indonesian Indonesia
+             "is-IS", // Icelandic Iceland
+             "it-CH", // Italian Switzerland
+             "it-IT", // Italian Italy
+             "ja-JP", // Japanese Japan
+             "jv-ID", // Javanese Indonesia
+             "km-KH", // Khmer Cambodia
+             "kn-IN", // Kannada India
+             "ko-KR", // Korean South Korea
+             "lo-LA", // Lao Laos
+             "lt-LT", // Lithuanian Lithuania
+             "lv-LV", // Latvian Latvia
+             "ml-IN", // Malayalam India
+             "mr-IN", // Marathi India
+             "ms-MY", // Malay Malaysia
+             "nb-NO", // Norwegian Bokmål Norway
+             "ne-NP", // Nepali Nepal
+             "nl-BE", // Dutch Belgium
+             "nl-NL", // Dutch Netherlands
+             "no-NO", // Norwegian Norway
+             "pa-IN", // Punjabi India
+             "pl-PL", // Polish Poland
+             "pt-BR", // Portuguese Brazil
+             "pt-PT", // Portuguese Portugal
+             "ro-RO", // Romanian Romania
+             "ru-RU", // Russian Russia
+             "si-LK", // Sinhala Sri Lanka
+             "sk-SK", // Slovak Slovakia
+             "sl-SI", // Slovenian Slovenia
+             "sq-AL", // Albanian Albania
+             "sr-RS", // Serbian Serbia
+             "sv-FI", // Swedish Finland
+             "sv-SE", // Swedish Sweden
+             "sw-KE", // Swahili Kenya
+             "ta-IN", // Tamil India
+             "te-IN", // Telugu India
+             "th-TH", // Thai Thailand
+             "tr-TR", // Turkish Turkey
+             "uk-UA", // Ukrainian Ukraine
+             "ur-PK", // Urdu Pakistan
+             "vi-VN", // Vietnamese Vietnam
+             "zh-CN", // Chinese China
+             "zh-HK", // Chinese Hong Kong
+             "zh-SG", // Chinese Singapore
+             "zh-TW", // Chinese Taiwan
+             "zu-ZA", // Zulu South Africa
 ]
